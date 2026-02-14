@@ -431,8 +431,13 @@ def demonstrate_gravitational_agi():
     
     agi.save_state('/tmp/agi_state.json')
     
-    # Create new AGI and load state
-    agi2 = GravitationalAGICore(dim_model=64)
+    # Create new AGI with same parameters and load state
+    agi2 = GravitationalAGICore(
+        dim_model=64,
+        dim_position=32,
+        num_heads=4,
+        curvature=0.15
+    )
     agi2.load_state('/tmp/agi_state.json')
     
     print(f"✓ State successfully saved and restored")
