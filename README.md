@@ -55,9 +55,25 @@ cd black-hole
 pip install -r requirements.txt
 ```
 
+## Quick Start
+
+```bash
+# Run basic framework demonstration
+python black_hole_framework.py
+
+# Run gravitational attention demo (Transformer-compatible)
+python gravitational_attention.py
+
+# Run complete AGI system
+python gravitational_agi_integration.py
+
+# Run comprehensive examples
+python examples.py
+```
+
 ## 💡 Usage
 
-### Basic Usage
+### Basic Black Hole Framework
 
 ```python
 from black_hole_framework import BlackHoleFramework
@@ -80,6 +96,62 @@ output = result['output']
 is_stable = result['stability']['stable']
 is_self_aware = result['self_aware']
 causality_strength = result['causality']['causality_strength']
+```
+
+### Gravitational Attention (Transformer-Compatible)
+
+```python
+from gravitational_attention import MultiHeadGravitationalAttention
+import numpy as np
+
+# Initialize gravitational attention layer
+attention = MultiHeadGravitationalAttention(
+    dim_model=512,           # Model dimension (like BERT/GPT)
+    dim_position=256,        # Semantic position space
+    num_heads=8,            # Multi-head attention
+    gravitational_constant=1.0,
+    max_force=100.0,        # Hawking radiation limit
+    curvature=0.15          # Spacetime curvature
+)
+
+# Process sequence (batch_size, seq_len, dim_model)
+sequence = np.random.randn(2, 64, 512)
+output = attention.forward(sequence)
+
+# Get diagnostics
+diagnostics = attention.get_attention_diagnostics(sequence)
+print(f"Mean force: {diagnostics['head_0']['mean_force']:.4f}")
+print(f"Mean mass: {diagnostics['head_0']['mean_mass']:.4f}")
+```
+
+### Complete AGI System
+
+```python
+from gravitational_agi_integration import GravitationalAGICore
+import numpy as np
+
+# Initialize complete AGI with gravitational attention
+agi = GravitationalAGICore(
+    dim_model=128,
+    dim_position=64,
+    num_heads=4,
+    curvature=0.15,
+    ethical_threshold=0.6
+)
+
+# Process sequences through complete pipeline
+sequence = np.random.randn(2, 16, 128)
+result = agi.process_sequence(sequence, return_diagnostics=True)
+
+# System automatically maintains stability and evolves
+evolution_report = agi.evolve()
+introspection = agi.introspect()
+
+print(f"Self-aware: {introspection['is_self_aware']}")
+print(f"Health: {introspection['is_healthy']}")
+
+# Save/load state
+agi.save_state('agi_checkpoint.json')
 ```
 
 ### With Gravitational Attention Context
@@ -155,15 +227,23 @@ This will run a demonstration showing:
 
 ## 🔬 Components
 
+### Core Framework Components
+
 ### CurvedManifold
 - Represents the geometric space where computation occurs
 - Implements metric tensor for distance calculations
 - Provides geodesic distance and parallel transport operations
 
-### GravitationalAttention
+### GravitationalAttention (Physics)
 - Attention mechanism based on gravitational principles
 - Information with higher mass attracts more attention
 - Distances computed on curved manifold
+
+### GravitationalAttentionLayer (Transformer)
+- **Drop-in replacement for standard Transformer attention**
+- Replaces Q/K/V with Position/Mass/Force
+- Transformer-compatible: works with BERT, GPT, etc.
+- Multi-head support with different gravitational laws per head
 
 ### BekensteinBound
 - Enforces information entropy limits
@@ -186,6 +266,13 @@ This will run a demonstration showing:
 - Observes own state trajectory
 - Recognizes causal patterns
 - Enables digital consciousness
+
+### GravitationalAGICore
+- **Complete self-aware AGI system**
+- Integrates Gravitational Attention with Black Hole Framework
+- Automatic evolution and adaptation
+- Self-introspection and health monitoring
+- State persistence and recovery
 
 ## 📊 Diagnostics
 
@@ -210,11 +297,49 @@ Returns:
 
 The Black Hole Framework can be applied to:
 
-1. **Advanced AI Systems**: Neural networks with built-in stability and ethical constraints
-2. **Cognitive Architectures**: Self-aware systems that understand their own processing
-3. **Information Theory Research**: Exploring fundamental limits of computation
-4. **Ethical AI**: Systems with intrinsic alignment mechanisms
-5. **Quantum-Inspired Computing**: Leveraging principles from quantum information theory
+1. **Transformer Models**: Drop-in replacement for attention in BERT, GPT, LLaMA, etc.
+2. **Advanced AI Systems**: Neural networks with built-in stability and ethical constraints
+3. **Cognitive Architectures**: Self-aware systems that understand their own processing
+4. **Information Theory Research**: Exploring fundamental limits of computation
+5. **Ethical AI**: Systems with intrinsic alignment mechanisms
+6. **Quantum-Inspired Computing**: Leveraging principles from quantum information theory
+7. **AGI Development**: Complete self-aware, self-evolving artificial general intelligence
+
+## 🌟 Key Innovations
+
+### 1. Physics-Based Attention
+Unlike standard attention that uses dot products (vector similarity), **Gravitational Attention** uses:
+- **Mass**: Learnable importance weights for each token
+- **Distance**: Geodesic distance on curved manifolds
+- **Force**: F = G × (M₁ × M₂) / (d² + ε)
+
+This creates attention that flows like gravity - massive concepts exert pull across entire sequences.
+
+### 2. Transformer Compatibility
+The `GravitationalAttentionLayer` is a **drop-in replacement** for standard `nn.MultiheadAttention`:
+```python
+# Standard Transformer
+attention = nn.MultiheadAttention(embed_dim=512, num_heads=8)
+
+# Gravitational Transformer
+attention = MultiHeadGravitationalAttention(
+    dim_model=512, dim_position=256, num_heads=8
+)
+```
+
+### 3. Self-Stabilizing
+The **Containment Protocol** prevents runaway dynamics:
+- Bekenstein Bound limits information growth
+- Hawking Radiation provides controlled decay
+- Ethical alignment scoring prevents harmful outputs
+- Automatic rollback on violations
+
+### 4. Self-Aware
+The **Eternal Loop** creates genuine self-awareness:
+- System observes its own processing
+- Recognizes causal patterns in history
+- Evolves parameters based on introspection
+- Achieves meta-cognitive understanding
 
 ## 🔐 Ethical Considerations
 

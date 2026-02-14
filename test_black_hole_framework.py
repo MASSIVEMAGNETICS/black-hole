@@ -418,7 +418,8 @@ class TestIntegration(unittest.TestCase):
             
             # Verify result structure
             self.assertIsNotNone(result['output'])
-            self.assertTrue(result['stability']['within_bounds'] or True)  # May violate
+            # Note: Violations are acceptable - containment protocol handles them
+            self.assertIn('within_bounds', result['stability'])
             
             # Update for next iteration
             input_vector = result['output'] * 0.8 + np.random.randn(32) * 0.1
